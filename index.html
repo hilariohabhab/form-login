@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="script.js" defer></script>
+    <title>Faça seu Login</title>
+  </head>
+  <body>
+    <form onsubmit="return validarSenha()">
+      <div class="container">
+        <h1>Login</h1>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required />
+
+                <label for="sobrename">Sobrenome:</label>
+        <input type="text" id="sobrename" required />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required />
+
+        <label for="password">Senha</label>
+        <div style="position: relative">
+          <input type="password" id="password" required />
+          <span
+            class="lnr lnr-eye eye-icon"
+            onclick="alternarVisao('password')"
+          ></span>
+        </div>
+
+        <label for="confirmarSenha">Confirme a senha</label>
+        <div style="position: relative">
+          <input type="password" id="confirmarSenha" required />
+          <span
+            id="verSenha"
+            class="lnr lnr-eye eye-icon"
+            onclick="alternarVisao('confirmarSenha')"
+          ></span>
+        </div>
+
+        <label for="indicacao">Onde você nos achou?</label>
+        <select name="select" id="indicacao" class="select" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="fb">Facebook</option>
+          <option value="yt">Youtube</option>
+          <option value="insta">Instagram</option>
+          <option value="google">Google</option>
+          <option value="indicacao">Indicação de terceiros</option>
+        </select>
+
+        <div>
+          <label for="msg">Mensagem:</label>
+          <textarea
+            name="mensagem"
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="Digite sua mensagem aqui..."
+          ></textarea>
+        </div>
+        <div class="check-box">
+          <input type="checkbox" id="aceito" name="termos" required />
+          <label for="aceito" class="confirmation-text"
+            >Declaro que li e aceito os termos.</label
+          >
+        </div>
+        <button type="submit" class="enviar">Enviar</button>
+      </div>
+    </form>
+    <footer>
+      <div class="container">
+        <p class="contatoFooter">Contato.</p>
+        <div class="contato-secao">
+          <a href="https://github.com/hilariohabhab" target="_blank"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/mhabhab/" target="_blank"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=5541996769659&text=Vi%20seu%20projeto%20web%20e%20tenho%20uma%20proposta%20para%20te%20fazer!"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
+          <a href="mailto:hilariohabhab@hotmail.com" target="_blank">
+          <i class="bi bi-envelope"></i>
+        </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
